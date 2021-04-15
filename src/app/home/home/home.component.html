@@ -1,0 +1,231 @@
+<div class="jumbotron">
+    <div class="row row-jumbo">
+        <div class="col-6 background">
+            <h2 class="animate__animated animate__backInRight">
+                Foragua
+            </h2>
+            <h3 class="animate__animated animate__backInRight">
+                Fondo Regional Del Agua y Fondo Ambiental
+            </h3>
+            <h6 class="animate__animated animate__backInRight">
+                Ganadores Mundiales a la Principal Acción Climatica, Fideicomiso a 80 años plazo
+            </h6>
+            <hr>
+            <div class="animate__animated animate__backInRight">
+                <button class="btn btn-primary">Ver más</button><br>
+                <hr>
+                <button class="btn"><img src="assets/facebook.svg" alt=""></button>
+                <button class="btn"><img src="assets/twitter.svg" alt=""></button>
+                <button class="btn"><img src="assets/instagram.svg" alt=""></button>
+                <button class="btn"><img src="assets/linkedin.svg" alt=""></button>
+                <button class="btn"><img src="assets/youtube.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-posts">
+    <div class="custom-shape-divider-top-1618021757" style="position: relative; z-index: 1;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+    </div>
+    <div class="container pb-4">
+        <h2 class="text-center">
+            Últimas noticias
+        </h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4" *ngFor="let post of posts">
+                <div class="card h-100 shadow-lg">
+                    <img [src]="post.img" height="300px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <!-- <p class="card-text" [innerHTML]="post.body"></p> -->
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                    <div class="card-footer text-muted" *ngIf="post.created_at === post.updated_at">
+                        Creado: {{post.created_at}}
+                    </div>
+                    <div class="card-footer text-muted" *ngIf="post.created_at !== post.updated_at">
+                        {{post.created_at}}
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                <div class="card h-100">
+                    <img src="assets/premio.jpg" height="300px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CAMPEÓN MUNDIAL A LA ACCIÓN CLIMÁTICA COP25</h5>
+                        <p class="card-text">Premiados por el Green Climate Fund en la COP25 Por: Teresa Fernandez Herrera 08/12/2019 El Green Climate Fund (GCF) es el fondo más grande del mundo dedicado a combatir el cambio climático. Nació en 2010 en el marco de la Convención
+                            Marco de las Naciones Unidas sobre Cambio Climático para convertir en acciones climáticas planes innovadores inspirados en la […]</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                <div class="card h-100">
+                    <img src="assets/premio.jpg" height="300px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CAMPEÓN MUNDIAL A LA ACCIÓN CLIMÁTICA COP25</h5>
+                        <p class="card-text">Premiados por el Green Climate Fund en la COP25 Por: Teresa Fernandez Herrera 08/12/2019 El Green Climate Fund (GCF) es el fondo más grande del mundo dedicado a combatir el cambio climático. Nació en 2010 en el marco de la Convención
+                            Marco de las Naciones Unidas sobre Cambio Climático para convertir en acciones climáticas planes innovadores inspirados en la […]</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<div class="custom-shape-divider-top-1618021758" style="position: relative; z-index: 1;">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+</svg>
+</div>
+<div class="container">
+
+    <h2 class="text-center">Nosotros</h2>
+    <section>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <!-- <img src="assets/abril-simpocio.jpg" class="img-fluid" alt=""> -->
+                <div id="carouselExampleControls" class="carousel slide shadow-lg" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 img-fluid" src="assets/jumbo.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 img-fluid" src="assets/abril-simpocio.jpg" alt="Second slide">
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <img class="d-block w-100" src="..." alt="Third slide">
+                        </div> -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, laboriosam nisi, repellendus perspiciatis excepturi illo aspernatur qui quod a accusamus quae sequi ullam similique? Voluptates illum necessitatibus non facere iste.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eligendi repudiandae enim accusamus vitae similique cumque incidunt voluptate delectus totam, quam reprehenderit blanditiis placeat nemo eius molestias beatae quas itaque.</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="container-posts">
+    <div class="custom-shape-divider-top-1618021757" style="position: relative; z-index: 1;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+    </div>
+    <h2 class="text-center">¿Cómo ser miembro?</h2>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"></div>
+        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+            <p>Para ser parte de nuestra organización, los municipios deben cumplir los siguientes requisitos:</p>
+            <ol>
+                <li>Expresar la voluntad política y financiera para ser nuevo constituyente mediante una carta de intención dirigida al Presidente del Directorio, quienes analizaran la pertinencia y condiciones. El Directorio resolverá la aceptación del nuevo
+                    constituyente y se ratificará en la Junta del fideicomiso.</li>
+                <li>La Secretaría Técnica, mediante convenio iniciará estudios de caracterización de las fuentes y sistemas de agua que están a cargo del municipio. Se generará una línea base ambiental y la propuesta de ordenanza que establece las áreas de
+                    conservación municipales y de uso sostenible llamadas ACMUS que incluyen las zonas de interés hídrico.</li>
+                <li>Validación de a la linea base con los técnicos municipales y el cabildo para su aprobación en base a la propuesta de la Ordenanza de conservación de fuentes de agua y biodiversidad, la cual incluye el ACMUS que regula el uso y ocupación
+                    del suelo; el financiamiento a través del cobro de una tasa ambiental al consumo de agua potable y los incentivos o sanciones a los propietarios de los predios. Estas áreas se publican en la gaceta municipal y/o el Registro Oficial.</li>
+                <li>
+                    Firma del convenio El Ministerio de Finanzas autorizara la firma del contrato de adhesión a FORAGUA.
+                </li>
+                <li>Firma el contrato de adhesión al FORAGUA entre la fiduciaria CFN y el GAD Municipal ante notario publico.</li>
+                <li>Firma del convenio de débito automático con el Banco Central del Ecuador para transferencia de recursos recaudados de tasa ambiental.</li>
+                <li>Los recursos acumulados se ejecutan en base a la ordenanza y el el contrato de fideicomiso mediante aprobación anual del Plan de Inversión en el cabildo y Directorio. En esta fase se suman los recurso de los proyectos de cooperación.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div>
+    <!-- <div class="custom-shape-divider-top-1618021758" style="position: relative; z-index: 1;">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+    </div> -->
+    <div class="row info">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 contact-info">
+            <h2 class="text-center mt-5">Información</h2>
+            <div class="row mt-3">
+                <div class="col-2 text-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+          </svg>
+                </div>
+                <div class="col-10">
+                    Av. Marañón y Calle Yacuambi, Edificio SAVANNAH 13-83, Piso 2, Oficina 3, Loja, Ecuador.
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-2 text-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-2-fill" viewBox="0 0 16 16">
+                <path d="M7.293.707A1 1 0 0 0 7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586A1 1 0 0 0 7.293.707z"/>
+              </svg>
+                </div>
+                <div class="col-10">
+                    EC110103
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-2 text-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16">
+            <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
+          </svg>
+                </div>
+                <div class="col-10">
+                    foragua@gmail.com
+                </div>
+            </div>
+
+            <div class="text-center mt-4 mb-5 ml-2 embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15920.348983336133!2d-79.1945175!3d-4.0024856!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x64009cdea7fa6114!2sOFICINAS%20FORAGUA%20EDIFICIO%20SAVANNAH%2013-83%2C%20PISO%202%2C%20OFICINA%203!5e0!3m2!1ses-419!2sec!4v1618008328099!5m2!1ses-419!2sec"
+                    width="500" height="400" style="border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 contact-form">
+            <h2 class="text-center mt-5">Contactanos</h2>
+            <div class="row">
+                <div class="col-8 offset-1">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Tu nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="email" placeholder="Ingrese su correo" class="form-control" id="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" class="form-control" placeholder="Ingrese el motivo de su mensaje" id="mensaje" cols="70" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

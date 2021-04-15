@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="form-group">
+        <label for="title">Titulo</label>
+        <input type="text" class="form-control" [(ngModel)]="post.title">
+    </div>
+    <quill-editor [(ngModel)]="post.body" [modules]="modules"></quill-editor>
+    <button class="btn btn-primary" (click)="guardar()">Guardar</button>
+
+
+</div>

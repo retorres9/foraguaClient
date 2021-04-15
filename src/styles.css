@@ -1,0 +1,138 @@
+h2 {
+    padding-top: 40px;
+}
+
+.bg-light {
+    background-color: #1880b7!important;
+}
+
+.custom-shape-divider-top-1618021757 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1618021757 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 82px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1618021757 .shape-fill {
+    fill: white;
+}
+
+.custom-shape-divider-top-1618021758 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1618021758 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 82px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1618021758 .shape-fill {
+    fill: #b2dce2;
+}
+
+.btn-outline-success {
+    background-color: white;
+    border-color: white;
+}
+
+.btn-outline-success:hover {
+    background-color: #0b7fb5;
+    border-color: white;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.show>.btn-outline-success.dropdown-toggle {
+    background-color: #0b7fb5;
+    border-color: #0b7fb5;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-success.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.jumbotron {
+    background: url(assets/jumbo.jpg);
+    background-position: 70%;
+    height: 500px;
+    background-size: cover;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.row {
+    margin-right: 0;
+    padding-bottom: 40px;
+}
+
+.row-jumbo {
+    background-color: rgba(255, 255, 255, 0.462);
+    clip-path: polygon(0 0, 62% 0, 49% 100%, 0% 100%);
+    height: inherit;
+}
+
+.background {
+    top: 10%;
+    margin-left: 2em;
+}
+
+.container-posts {
+    background-color: #b2dce2;
+    position: relative;
+}
+
+.img-fluid {
+    border-radius: 10px;
+}
+
+.w-100 {
+    height: 400px;
+}
+
+.contact-info {
+    background-color: #0b7fb5;
+}
+
+div.contact-info * {
+    color: white;
+}
+
+.contact-form {
+    background-color: #8ae4c4;
+}
+
+.form-control {
+    background-color: #8ae4c4;
+    border: none;
+    border-radius: 0px;
+    border-bottom: solid black !important;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-img-top {
+    padding: 10px;
+}
