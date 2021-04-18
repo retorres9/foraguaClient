@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import { Post } from '../../interfaces/post.interface';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-home',

@@ -1,2 +1,11 @@
-<p>administration works!</p>
+<div class="container">
+    <h2>Hola <span>{{user}}</span></h2>
+    <p>¿Que deseas hacer?</p>
+    <div class="d-block">
+        <a routerLink="/administration/posts-list" class="mr-2">Ver posts</a>
+        <a routerLink="/administration/edit">Crear nuevo post</a>
+    </div>
+    <hr>
+
+</div>
 <router-outlet></router-outlet>
