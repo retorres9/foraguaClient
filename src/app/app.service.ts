@@ -5,6 +5,8 @@ import { Post } from './interfaces/post.interface';
 import { CreateUser } from './auth/interfaces/create-user.interface';
 import { AuthUser } from './auth/interfaces/auth-user.interface';
 import { tap } from 'rxjs/operators';
+import { MailSentDto } from './home/home/interface/mails-response';
+import { Mail } from './home/home/interface/mail.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -52,5 +54,11 @@ export class AppService {
   logout() {
     localStorage.removeItem('user');
     this._authUser = undefined;
+  }
+
+  // MAIL
+
+  sendMail(mail: Mail): Observable<MailSentDto> {
+    return this.http.post<MailSentDto>('http://localhost:3000/mailer', mail);
   }
 }

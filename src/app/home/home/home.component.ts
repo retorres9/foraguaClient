@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import { Post } from '../../interfaces/post.interface';
 import * as moment from 'moment';
+import { Mail } from './interface/mail.dto';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,12 @@ import * as moment from 'moment';
 export class HomeComponent implements OnInit {
 
   posts: Post[] = [];
+  mail: Mail = {
+    name: '',
+    from: '',
+    text: ''
+  };
+
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
@@ -22,7 +29,20 @@ export class HomeComponent implements OnInit {
 
   toPost(id: string) {
     console.log(id);
-    
+  }
+
+  async sendMail() {
+    await this.appService.sendMail(this.mail).subscribe(
+      resp => {
+        if (resp.rejected.length !== 0) {
+          console.log('error');
+        } else {
+          this.mail.from = '';
+          this.mail.name = '';
+          this.mail.text = '';
+        }
+      }
+    );
   }
 
 }

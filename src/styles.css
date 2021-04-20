@@ -242,8 +242,7 @@ div.contact-info * {
 }
 
 .contact-form {
-    background: url(assets/water.jpg);
-    filter: blur(8px);
+    background: #3cedf5;
     background-size: cover;
 }
 

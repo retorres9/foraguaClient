@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MomentjsPipe } from '../pipes/momentjs.pipe';
 import { SharedModule } from '../shared/shared.module';
 import { PostsComponent } from './posts/posts.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { PostsComponent } from './posts/posts.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
