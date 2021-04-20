@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,18 +12,12 @@ export class NavbarComponent implements OnInit {
 
   isUserLogged: boolean = false;
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private appService: AppService) { }
 
   ngOnInit(): void {
-    const user = localStorage.getItem('user');
-    if (user) {
-      this.isUserLogged = true;
-    }
+    console.log(this.appService.isUserLogged);
+    
+    this.isUserLogged = this.appService.isUserLogged;
   }
-
-  logout() {
-    localStorage.removeItem('user');
-    this.router.navigate(['/']);
-  }
-
 }

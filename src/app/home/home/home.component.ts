@@ -20,4 +20,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  toPost(id: string) {
+    console.log(id);
+    
+  }
+
 }

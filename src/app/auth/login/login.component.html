@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="text-center">Iniciar Sesión</h2>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card p-3">
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" id="username" class="field" placeholder="Ingrese su usuario" aria-describedby="helpId" [(ngModel)]="user.username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" class="field" placeholder="Ingrese su contraseña" aria-describedby="helpId" [(ngModel)]="user.password">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" (click)="login()">Iniciar sesión</button>
+                </div>
+                <div class="text-center">
+                    <hr width="75%">
+                    <a class="btn" (click)="register()">Registrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

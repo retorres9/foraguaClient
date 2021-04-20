@@ -1,0 +1,14 @@
+<div class="container pt-5 pb-5" *ngIf="post">
+    <div class="row">
+        <div class="col-8">
+            <h3>{{[post.title | titlecase]}}</h3>
+            <img class="img-fluid" [src]="post.img" alt="">
+            <hr>
+            <small>Creado {{post.created_at | moment}}</small>
+            <hr>
+            <p [innerHtml]="post.body"></p>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

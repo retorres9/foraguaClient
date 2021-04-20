@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   }
 
   navigate() {
-    this.router.navigate(['auth/signup']);
+    this.router.navigate(['auth/login']);
   }
 
 }

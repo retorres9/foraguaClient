@@ -3,17 +3,28 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from './interfaces/post.interface';
 import { CreateUser } from './auth/interfaces/create-user.interface';
+import { AuthUser } from './auth/interfaces/auth-user.interface';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
-
+  private _authUser: AuthUser | undefined;
+  isUserLogged: boolean = false;
+  get user() {
+    return {...this._authUser}
+  }
+  
+  
   constructor(private http: HttpClient) { }
   // POSTS
 
   getLatestsPosts(): Observable<Post[]> {
     return this.http.get<Post[]>('http://localhost:3000/posts/latests');
+  }
+  getPost(id): Observable<Post> {
+    return this.http.get<Post>(`http://localhost:3000/posts/${id}`);
   }
 
   createPost(post: Post): Observable<Post> {
@@ -28,5 +39,18 @@ export class AppService {
 
   signUp(user: CreateUser): Observable<CreateUser> {
     return this.http.post<CreateUser>('http://localhost:3000/auth/signup', user);
+  }
+
+  login(authUser: AuthUser): Observable<any> {
+    return this.http.post<AuthUser>('http://localhost:3000/auth/login', authUser).pipe(
+      tap(auth => this._authUser = auth),
+      tap(auth => localStorage.setItem('user', this._authUser.username)),
+      tap(auth => this.isUserLogged = true)
+    );
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this._authUser = undefined;
   }
 }

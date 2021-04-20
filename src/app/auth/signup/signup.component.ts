@@ -27,6 +27,10 @@ export class SignupComponent {
         localStorage.setItem('user', resp.username);
         this.router.navigate(['administration/posts-list']);
       }
-    })
+    });
+  }
+
+  goToLogin() {
+    this.router.navigate(['auth/login']);
   }
 }
