@@ -13,6 +13,7 @@ import { Mail } from './interface/mail.dto';
 export class HomeComponent implements OnInit {
 
   posts: Post[] = [];
+  alert: boolean = false;
   mail: Mail = {
     name: '',
     from: '',
@@ -40,6 +41,10 @@ export class HomeComponent implements OnInit {
           this.mail.from = '';
           this.mail.name = '';
           this.mail.text = '';
+          this.alert = true;
+          setTimeout(() => {
+            this.alert = false;
+          }, 3000);
         }
       }
     );

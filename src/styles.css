@@ -242,12 +242,20 @@ div.contact-info * {
 }
 
 .contact-form {
-    background: #3cedf5;
+    background: url(assets/water.jpg);
     background-size: cover;
 }
 
+.card-contact {
+    background-color: rgba(32, 146, 177, 0.864);
+    border-radius: 15px;
+}
+
+label {
+    color: white;
+}
+
 .form-control {
-    background-color: #60d8f1;
     border: none;
     border-radius: 0px;
     border-bottom: solid black !important;
